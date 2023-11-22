@@ -2,7 +2,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-data = pd.read_csv('C:/Users/218/Desktop/cox-violent-parsed_filt_usable.csv')
+data = pd.read_csv('/Users/lmr/Desktop/SE1115/1122/repo/compass.csv')
 
 selected_columns = ['sex', 'age', 'race', 'is_violent_recid', 'is_recid', 'event']
 df = data[selected_columns]
@@ -17,3 +17,13 @@ race_violent_recid_matrix = pd.crosstab(df['race'], df['is_violent_recid'])
 sns.heatmap(race_violent_recid_matrix, annot=True, fmt='d', cmap='Blues')
 plt.title('Race vs. Violent Recidivism')
 plt.show()
+
+# 성별과 일반적 재범 발생 여부 데이터 집계
+gender_recid = df.groupby(['sex', 'is_recid']).size().reset_index(name='count')
+
+# 인종과 폭력적 재범 발생 여부 데이터 집계
+race_violent_recid = df.groupby(['race', 'is_violent_recid']).size().reset_index(name='count')
+
+# JSON 파일로 저장
+gender_recid.to_json('/Users/lmr/Desktop/SE1115/1122/repo/gender_recid.json', orient='records')
+race_violent_recid.to_json('/Users/lmr/Desktop/SE1115/1122/repo/race_violent_recid.json', orient='records')
