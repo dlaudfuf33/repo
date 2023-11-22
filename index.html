@@ -6,15 +6,17 @@
         body {
             text-align: center; /* 텍스트 중앙 정렬 */
         }
-        #visualization {
+        #visualization1, #visualization2 {
             margin: auto; /* 가로 방향으로 자동 마진 설정 */
             width: 80%; /* 시각화 너비 설정 */
+            margin-bottom: 20px; /* 시각화 사이의 여백 */
         }
     </style>
 </head>
 <body>
     <h1>COMPAS Dataset Analysis</h1>
-    <div id="visualization"></div>
+    <div id="visualization1"></div> <!-- 첫 번째 시각화 -->
+    <div id="visualization2"></div> <!-- 두 번째 시각화 -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
