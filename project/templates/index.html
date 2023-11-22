@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis</title>
+</head>
+<body>
+    <h1>Data Analysis</h1>
+
+    <h2>Gender vs. General Recidivism</h2>
+    <img src="{{ url_for('static', filename='gender_recid_plot.png') }}" alt="Gender vs. General Recidivism">
+
+    <h2>Race vs. Violent Recidivism</h2>
+    <img src="{{ url_for('static', filename='race_violent_recid_plot.png') }}" alt="Race vs. Violent Recidivism">
+
+    <h2>Data Analysis Results</h2>
+    {{ analysis_table_html|safe }}
+</body>
+</html>
