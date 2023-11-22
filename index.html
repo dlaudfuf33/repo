@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>COMPAS Data Visualization</title>
+    <style>
+        body {
+            text-align: center; /* 텍스트 중앙 정렬 */
+        }
+        #visualization1, #visualization2 {
+            margin: auto; /* 가로 방향으로 자동 마진 설정 */
+            width: 80%; /* 시각화 너비 설정 */
+            margin-bottom: 40px; /* 시각화 사이의 여백 */
+            border: 11px solid #ccc; /* 테두리 설정 */
+            min-height: 300px; /* 최소 높이 설정 */
+            padding: 10px; /* 내부 여백 설정 */
+        }
+    </style>
+</head>
+<body>
+    <h1>COMPAS Dataset Analysis</h1>
+    <div id="visualization1"></div> <!-- 첫 번째 시각화 -->
+    <div id="visualization2"></div> <!-- 두 번째 시각화 -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="analysis.js"></script>
+</body>
+</html>
