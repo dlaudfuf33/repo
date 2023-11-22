@@ -1,7 +1,7 @@
 // Vega-Lite을 사용한 시각화를 위한 함수
 const visualizeData = async () => {
   // 'correlation_matrix.json' 파일을 비동기적으로 불러옴
-  const response = await fetch('correlation_matrix.json');
+  const response = await fetch('파일명.json');
   // 응답으로부터 JSON 데이터를 추출
   const data = await response.json();
 
